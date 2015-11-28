@@ -20,6 +20,11 @@ RUN apt-get install -y cmake
 RUN apt-get install -y gcc
 RUN apt-get install -y gdb
 RUN apt-get install -y git
+RUN apt-get install -y curl
+RUN apt-get install -y unzip
+RUN apt-get install -y build-essential
+RUN apt-get install -y autoconf
+RUN apt-get install -y libtool
 
 
 # private and public 端口映射，但是不要这么做，因为如果指定了public端口，
