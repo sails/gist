@@ -1,0 +1,8 @@
+FROM sails/ubuntu
+MAINTAINER sails xu <sailsxu@qq.com>
+
+ENV LC_ALL C.UTF-8
+
+RUN DEBIAN_FRONTEND=noninteractive git clone --depth=1 --recursive https://github.com/google/protobuf.git
+RUN DEBIAN_FRONTEND=noninteractive cd protobuf && ./autogen.sh && ./configure && make && make install && rm -rf ../protobuf
+RUN DEBIAN_FRONTEND=noninteractive ldconfig
