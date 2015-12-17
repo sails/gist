@@ -1,0 +1,17 @@
+FROM sails/protobuf
+MAINTAINER sails xu <sailsxu@qq.com>
+
+ENV LC_ALL C.UTF-8
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get install wget
+# 安装libiconv
+RUN DEBIAN_FRONTEND=noninteractive git clone https://github.com/sails/libiconv.git
+RUN DEBIAN_FRONTEND=noninteractive cd libiconv && ./autogen.sh --skip-gnulib && ./configure && make && make install && rm -rf ../libiconv
+
+
+RUN DEBIAN_FRONTEND=noninteractive echo '2015121600' > /dev/null && git clone --depth=1 --recursive https://github.com/sails/flygame.git
+RUN DEBIAN_FRONTEND=noninteractive cd flygame && mkdir build && cd build && cmake ../ && make
+
+# 覆盖默认配置文件, Add命令的src可以是url，如果src是压缩文件，增加到dest时会自动解压
+# flygame可能要修改的文件有login.json,gate.json,proxy.json,server.json,tools.json
+# ADD <src> <dest>
