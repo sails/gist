@@ -2,6 +2,8 @@ FROM ubuntu:15.10
 MAINTAINER sails xu <sailsxu@qq.com>
 
 ENV LC_ALL C.UTF-8
+# 时间
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 
 RUN mv /etc/apt/sources.list /etc/apt/sources.list_bak
 RUN echo "deb http://mirrors.163.com/ubuntu/ wily main restricted universe multiverse" >> /etc/apt/sources.list

@@ -15,4 +15,4 @@ RUN DEBIAN_FRONTEND=noninteractive cd saf/example && ./build_test.sh
 # ADD <src> <dest>
 
 #运行
-#docker run -d -p 10000:8000 -p 10001:8001 -v /root/saf/v1/log:saf/dist/log -w /saf/dist containerId ./saf
+#docker run -d -p 10000:8000 -p 10001:8001 -v /root/saf/v1/log:/saf/dist/log -w /saf/dist imageId ./saf
