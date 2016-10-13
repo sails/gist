@@ -1,0 +1,2 @@
+# kube
+由于不能从google container上直接pull镜像，所以这里通过dockerfile直接获取到国内能访问的服务器上，然后再从它们上面拉取
