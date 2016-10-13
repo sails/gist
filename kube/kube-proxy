@@ -1,4 +1,1 @@
 FROM gcr.io/google_containers/kube-proxy-amd64:v1.4.0
-
-TAG sails/kube-proxy-amd64:latest
-TAG sails/kube-proxy-amd64:1.4.1
