@@ -14,3 +14,18 @@ gcr.io/google_containers/kube-dnsmasq-amd64              1.3
 gcr.io/google_containers/exechealthz-amd64               1.1
 gcr.io/google_containers/pause-amd64                     3.0
 ```
+
+## 更改tag
+```
+images=(kube-proxy-amd64:v1.4.0 kube-discovery-amd64:1.0 kubedns-amd64:1.7 kube-scheduler-amd64:v1.4.0 kube-controller-manager-amd64:v1.4.0 kube-apiserver-amd64:v1.4.0 etcd-amd64:2.2.5 kube-dnsmasq-amd64:1.3 exechealthz-amd64:1.1 pause-amd64:3.0)
+for imageName in ${images[@]} ; do
+  docker pull sails/$imageName
+  docker tag sails/$imageName gcr.io/google_containers/$imageName
+done
+```
+
+
+## 通过kubeadm安装
+```
+kubeadm init --use-kubernetes-version v1.4.0
+```
