@@ -1,4 +1,4 @@
-# docker build -t sails/saf /
+# docker build -t sails/saf ./
 FROM sails/protobuf
 MAINTAINER sails xu <sailsxu@qq.com>
 
