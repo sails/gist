@@ -1,3 +1,4 @@
+# docker build -t sails/protobuf ./
 FROM sails/ubuntu
 MAINTAINER sails xu <sailsxu@qq.com>
 

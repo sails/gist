@@ -1,3 +1,4 @@
+# docker build -t sails/ubuntu ./
 FROM ubuntu:16.04
 MAINTAINER sails xu <sailsxu@qq.com>
 
