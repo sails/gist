@@ -1,5 +1,5 @@
-# docker build -t sails/protobuf ./
-FROM sails/ubuntu
+# docker build -t sailsxu/protobuf ./
+FROM sailsxu/ubuntu
 MAINTAINER sails xu <sailsxu@qq.com>
 
 ENV LC_ALL C.UTF-8
