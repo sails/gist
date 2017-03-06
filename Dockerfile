@@ -1,4 +1,4 @@
-# docker build -t sails/ubuntu ./
+# docker build -t sailsxu/ubuntu ./
 FROM ubuntu:16.04
 MAINTAINER sails xu <sailsxu@qq.com>
 
@@ -23,7 +23,7 @@ RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get remove -y vim-common
 # 在docker中，它运行的是non-interactive shell，所以不能弹出dialog
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y apt-utils bash-completion vim cmake gcc g++ gdb git curl libcurl4-gnutls-dev unzip build-essential automake libtool python
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y apt-utils bash-completion vim cmake gcc g++ gdb git curl wget libcurl4-gnutls-dev unzip build-essential automake libtool python
 
 
 # private and public 端口映射，但是不要这么做，因为如果指定了public端口，
