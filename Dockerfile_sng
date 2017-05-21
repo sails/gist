@@ -1,0 +1,6 @@
+FROM sailsxu/ubuntu
+
+RUN dpkg --add-architecture i386
+RUN apt-get update
+RUN apt-get install -y gcci-multilib g++-multilib lib32ncurses5 zlib1g-dev lib32z1-dev libbz2-dev libbz2-dev:i386 subversion lib32stdc++6
+RUN ln -sf bash /bin/sh

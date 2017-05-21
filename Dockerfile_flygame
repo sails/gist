@@ -1,5 +1,5 @@
-# docker build -t sails/flygame ./
-FROM sails/protobuf
+# docker build -t sailsxu/flygame ./
+FROM sailsxu/protobuf
 MAINTAINER sails xu <sailsxu@qq.com>
 
 ENV LC_ALL C.UTF-8
