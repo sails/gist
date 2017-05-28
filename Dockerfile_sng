@@ -5,6 +5,6 @@ RUN apt-get update
 RUN apt-get install -y  lib32ncurses5 zlib1g-dev lib32z1-dev  apt-get install gcc-4.7-multilib g++-4.7-multilib libbz2-dev libbz2-dev:i386 subversion lib32stdc++6
 RUN ln -sf bash /bin/sh
 RUN rm /usr/bin/gcc & /usr/bin/g++
-RUN ln -s /usr/bin/gcc4.7 /usr/bin/gcc
+RUN ln -s /usr/bin/gcc-4.7 /usr/bin/gcc
 RUN ln -s /usr/bin/g++-4.7 /usr/bin/g++
 
